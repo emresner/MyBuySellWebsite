@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Home</h1>
+
+<!-- Categories Section -->
+<div class="category-list">
+    {% for cat in categories %}
+        <div class="category-item">
+            <a href="{{ url_for('search', q=cat['category']) }}">
+                {{ cat['category'] }} ({{ cat['cnt'] }})
+            </a>
+        </div>
+    {% endfor %}
+</div>
+
+<!-- Products Showcase -->
+<h2>Featured Products</h2>
+<div class="product-grid">
+    {% for product in products %}
+        <div class="product-item">
+            <img src="{{ product['image_link'] }}" alt="{{ product['description'] }}">
+            <p><strong>{{ product['description'] }}</strong></p>
+            <a href="{{ url_for('detail', ad_no=product['ad_no']) }}">View Details</a>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

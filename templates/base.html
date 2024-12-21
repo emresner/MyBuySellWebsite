@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{{ title if title else "My Buy-Sell Website" }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">MyWebsite</div>
+        <form class="search-form" action="{{ url_for('search') }}" method="get">
+            <input type="text" name="q" placeholder="Search..." value="{{ request.args.get('q','') }}">
+            <button type="submit">Search</button>
+        </form>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

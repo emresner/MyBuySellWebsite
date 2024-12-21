@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="product-detail">
+    <img src="{{ product['image_link'] }}" alt="{{ product['description'] }}">
+    <h2>{{ product['description'] }}</h2>
+    <p><strong>Ad No:</strong> {{ product['ad_no'] }}</p>
+    <p><strong>Price:</strong> {{ product['price'] }}</p>
+    <p><strong>City:</strong> {{ product['city'] }}</p>
+    <p><strong>Category:</strong> {{ product['category'] }}</p>
+    
+    <!-- Back to Home button -->
+    <a href="{{ url_for('home') }}" class="back-button">Back to Home</a>
+</div>
+{% endblock %}

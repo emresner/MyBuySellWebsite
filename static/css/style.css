@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.logo {
+    display: inline-block;
+    font-size: 24px; /* Make the text larger */
+    font-weight: bold; /* Make it bold */
+    font-family: Arial, sans-serif; /* Choose a nice font */
+    color: #db8eff; /* Chosen color */
+    margin-right: 20px;
+}
+
+.search-form {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.search-form input[type="text"] {
+    padding: 5px;
+}
+
+.search-form button {
+    padding: 5px 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px; /* Additional spacing before the product showcase */
+}
+
+.category-item {
+    background: #f0f0f0;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.category-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.product-item p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.product-item a {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.product-item a:hover {
+    background: #555;
+}
+
+.product-detail {
+    max-width: 600px;
+    margin: auto;
+}
+
+.product-detail img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.back-button:hover {
+    background: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .category-list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .category-item {
+        width: 100%;
+    }
+}
