@@ -1,2 +1,2 @@
 # MyWebsite
-I've tried Flask framework for the first time and created an buy-sell website
+I've tried Flask framework for the first time and created a buy-sell website.
